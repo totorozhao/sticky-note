@@ -44,7 +44,7 @@ Note.prototype = {
       </div>`;
     this.$note = $(tpl)
     this.opts.$ct.append(this.$note)
-    //Event.trigger('waterfall');
+    Event.trigger('waterfall')
   },
 
   setStyle: function () {

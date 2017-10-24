@@ -4,6 +4,7 @@
    width: 180px;
    margin: 20px 10px;   
    transition: all .3s;
+   box-shadow: 10px 10px 20px #949292;
    .note-header{
     height: 20px;
     background-color: #ea9b35;
@@ -34,11 +35,17 @@
     }
     .delete{
         position: absolute;
-        right:4px;
-        font-size: 22px;
-        color: #fff;
+        right: -7px;
+        font-size: 20px;
+        /* color: #fff; */
         cursor: pointer;
-        top:-3px;    
+        top: -3px;
+        box-shadow: 2px 4px 10px #000;
+        border-radius: 50%;
+        width: 25px;
+        text-align: center;
+        background-color: #ede9e9;
+        top: -7px;
     }
     &:hover .delete{
         opacity: 1;

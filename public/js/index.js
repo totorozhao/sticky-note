@@ -216,7 +216,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(11);
+var	fixUrls = __webpack_require__(13);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -535,7 +535,7 @@ function updateLink (link, options, obj) {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {__webpack_require__(13);
+/* WEBPACK VAR INJECTION */(function($) {__webpack_require__(15);
 
 function toast(msg,time){
     this.msg = msg  
@@ -607,7 +607,7 @@ module.exports = EventCenter
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(12);
+var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -638,8 +638,8 @@ if(false) {
 /* WEBPACK VAR INJECTION */(function($) {__webpack_require__(9);
 __webpack_require__(5)
 let Toast = __webpack_require__(3).Toast
-let Manager = __webpack_require__(15).Manager
-let WaterFall = __webpack_require__(17)
+let Manager = __webpack_require__(17).Manager
+let WaterFall = __webpack_require__(19)
 let Event = __webpack_require__(4)
 
 Manager.loadAll()
@@ -730,13 +730,25 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "html,\nbody {\n  margin: 0;\n  height: 100%;\n}\nul,\nli {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\na {\n  text-decoration: none;\n  color: black;\n}\n.header {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  background-color: #5f74ac;\n  height: 69px;\n  font-size: 16px;\n  z-index: 10000;\n}\n.header .add-note {\n  display: block;\n  float: left;\n  font-size: 24px;\n  padding: 20px 1px;\n  color: #fed136;\n  margin-left: 100px;\n}\n.header .user-area {\n  padding-right: 16px;\n  float: right;\n}\n.header .user-area li {\n  float: left;\n  margin-left: 5px;\n  line-height: 69px;\n  font-size: 14px;\n}\n.header .user-area li span,\n.header .user-area li a {\n  color: #fff;\n  display: block;\n}\n.header .user-area li img {\n  height: 21px;\n  border-radius: 50%;\n  vertical-align: middle;\n}\n#content {\n  position: relative;\n  margin: 75px auto 0 ;\n}\n", ""]);
+exports.push([module.i, "html,\nbody {\n  margin: 0;\n  height: 100%;\n}\nul,\nli {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n}\na {\n  text-decoration: none;\n  color: black;\n}\n.bg {\n  background: #ddd url(" + __webpack_require__(11) + ") repeat 0 0;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 0;\n  width: 100%;\n  background-size: cover;\n  background-position: bottom center;\n  filter: blur(5px);\n}\n.bg1 {\n  background: url(" + __webpack_require__(12) + ") 0 0 no-repeat;\n  background-size: cover;\n  background-attachment: fixed;\n}\n.header {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  background-color: #5f74ac;\n  height: 69px;\n  font-size: 16px;\n  z-index: 10000;\n}\n.header .add-note {\n  display: block;\n  float: left;\n  font-size: 32px;\n  padding: 15px 1px;\n  color: #fed136;\n  margin-left: 100px;\n}\n.header .user-area {\n  padding-right: 16px;\n  float: right;\n}\n.header .user-area li {\n  float: left;\n  margin-left: 5px;\n  line-height: 69px;\n  font-size: 14px;\n}\n.header .user-area li span,\n.header .user-area li a {\n  color: #fff;\n  display: block;\n}\n.header .user-area li img {\n  height: 21px;\n  border-radius: 50%;\n  vertical-align: middle;\n}\n#content {\n  position: relative;\n  margin: 75px auto 0 ;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../images/momentum.jpg?64844e6a92df47e4578b3a71e551aa1e";
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "../images/world.jpg?181f4625be57bac1cea16581ff3e5c03";
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 
@@ -831,7 +843,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -839,19 +851,19 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".note {\n  position: absolute;\n  color: #242121;\n  width: 180px;\n  margin: 20px 10px;\n  transition: all .3s;\n}\n.note .note-header {\n  height: 20px;\n  background-color: #ea9b35;\n  cursor: move;\n}\n.note .note-header:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: 50%;\n  top: -10px;\n  transform: translate(-50%);\n  width: 54px;\n  height: 18px;\n  background: #35bba3;\n}\n.note .note-header:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: 50%;\n  top: -10px;\n  margin-left: 27px;\n  width: 0;\n  height: 0;\n  border-left: 5px solid #299683;\n  border-top: 18px solid transparent;\n  z-index: -1;\n}\n.note .note-header .delete {\n  position: absolute;\n  right: 4px;\n  font-size: 22px;\n  color: #fff;\n  cursor: pointer;\n  top: -3px;\n}\n.note .note-header:hover .delete {\n  opacity: 1;\n}\n.note .note-cnt {\n  padding: 10px;\n  background-color: #efb04e;\n  outline: none;\n}\n.note .note-info {\n  line-height: 30px;\n}\n.note .note-info .note-time {\n  text-align: right;\n  padding-right: 10px;\n  color: #fff;\n  font-size: 12px;\n}\n.note .note-info .note-name {\n  margin-top: -1px;\n  text-align: right;\n  padding-right: 10px;\n  color: #fff;\n  margin-bottom: -9px;\n  font-size: 14px;\n}\n.draggable {\n  opacity: 0.7;\n  cursor: move;\n  transition: none;\n}\n", ""]);
+exports.push([module.i, ".note {\n  position: absolute;\n  color: #242121;\n  width: 180px;\n  margin: 20px 10px;\n  transition: all .3s;\n  box-shadow: 10px 10px 20px #949292;\n}\n.note .note-header {\n  height: 20px;\n  background-color: #ea9b35;\n  cursor: move;\n}\n.note .note-header:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: 50%;\n  top: -10px;\n  transform: translate(-50%);\n  width: 54px;\n  height: 18px;\n  background: #35bba3;\n}\n.note .note-header:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: 50%;\n  top: -10px;\n  margin-left: 27px;\n  width: 0;\n  height: 0;\n  border-left: 5px solid #299683;\n  border-top: 18px solid transparent;\n  z-index: -1;\n}\n.note .note-header .delete {\n  position: absolute;\n  right: -7px;\n  font-size: 20px;\n  /* color: #fff; */\n  cursor: pointer;\n  top: -3px;\n  box-shadow: 2px 4px 10px #000;\n  border-radius: 50%;\n  width: 25px;\n  text-align: center;\n  background-color: #ede9e9;\n  top: -7px;\n}\n.note .note-header:hover .delete {\n  opacity: 1;\n}\n.note .note-cnt {\n  padding: 10px;\n  background-color: #efb04e;\n  outline: none;\n}\n.note .note-info {\n  line-height: 30px;\n}\n.note .note-info .note-time {\n  text-align: right;\n  padding-right: 10px;\n  color: #fff;\n  font-size: 12px;\n}\n.note .note-info .note-name {\n  margin-top: -1px;\n  text-align: right;\n  padding-right: 10px;\n  color: #fff;\n  margin-bottom: -9px;\n  font-size: 14px;\n}\n.draggable {\n  opacity: 0.7;\n  cursor: move;\n  transition: none;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(14);
+var content = __webpack_require__(16);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -876,7 +888,7 @@ if(false) {
 }
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -890,11 +902,11 @@ exports.push([module.i, ".toast {\n  position: fixed;\n  color: rebeccapurple;\n
 
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {let Toast = __webpack_require__(3).Toast
-let Note = __webpack_require__(16).Note
+let Note = __webpack_require__(18).Note
 let Event = __webpack_require__(4)
 let Manager = (function () {
 
@@ -930,7 +942,7 @@ module.exports.Manager = Manager
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {__webpack_require__(5)
@@ -979,7 +991,7 @@ Note.prototype = {
       </div>`;
     this.$note = $(tpl)
     this.opts.$ct.append(this.$note)
-    //Event.trigger('waterfall');
+    Event.trigger('waterfall')
   },
 
   setStyle: function () {
@@ -1087,7 +1099,7 @@ module.exports.Note = Note;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Waterfall = (function () {

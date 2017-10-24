@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>便利贴网站</title>
+    <title>便利贴</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="bg1">
+    <!-- <div class="bg"></div> -->
     <header class="header">
-      <a class="add-note" href="#" title="添加笔记">添加</a>
+      <a class="add-note" href="#" title="添加笔记"><i class="fa fa-plus" aria-hidden="true"></i></a>
       <ul class="user-area">
         <% if(isLogin) {%>
         <li>

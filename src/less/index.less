@@ -11,6 +11,24 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.bg{
+    background: #ddd url('../images/momentum.jpg') repeat 0 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    filter: blur(5px);
+}
+.bg1{
+    background: url('../images/world.jpg') 0 0 no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 .header{
     position: fixed;
     top:0;
@@ -22,8 +40,8 @@ a{
     .add-note{
         display: block;
         float: left;
-        font-size: 24px;
-        padding: 20px 1px;
+        font-size: 32px;
+        padding: 15px 1px;
         color: #fed136;
         margin-left: 100px;
     }
