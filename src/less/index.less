@@ -1,0 +1,53 @@
+html,body{
+    margin: 0;
+    height: 100%;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.header{
+    position: fixed;
+    top:0;
+    width:100%;
+    background-color: #5f74ac;
+    height: 69px;
+    font-size: 16px;
+    z-index: 10000;
+    .add-note{
+        display: block;
+        float: left;
+        font-size: 24px;
+        padding: 20px 1px;
+        color: #fed136;
+        margin-left: 100px;
+    }
+    .user-area{
+        padding-right:16px;
+        float:right;
+        li{
+            float: left;
+            margin-left: 5px;
+            line-height: 69px;
+            font-size: 14px;
+            span,a {
+                color: #fff;
+                display: block;
+              } 
+            img {
+              height: 21px;
+              border-radius: 50%;
+              vertical-align: middle;
+            }           
+        }
+    }
+}
+#content{
+    position: relative; 
+    margin: 75px auto 0 ;
+}
