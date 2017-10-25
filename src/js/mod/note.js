@@ -1,5 +1,5 @@
 require('less/note.less')
-
+require('less/markdown.less')
 var Event = require('mod/event.js')
 var Toast = require('mod/toast.js').Toast
 

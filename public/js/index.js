@@ -639,7 +639,7 @@ if(false) {
 __webpack_require__(5)
 let Toast = __webpack_require__(3).Toast
 let Manager = __webpack_require__(16).Manager
-let WaterFall = __webpack_require__(18)
+let WaterFall = __webpack_require__(20)
 let Event = __webpack_require__(4)
 
 Manager.loadAll()
@@ -940,7 +940,7 @@ module.exports.Manager = Manager
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {__webpack_require__(5)
-
+__webpack_require__(18)
 var Event = __webpack_require__(4)
 var Toast = __webpack_require__(3).Toast
 
@@ -1103,6 +1103,51 @@ module.exports.Note = Note;
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(19);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./markdown.less", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/less-loader/dist/cjs.js!./markdown.less");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "blockquote {\n  border-left: 10px solid #ccc;\n  background: #FFF;\n  margin: 1em;\n  padding: .5em 1em;\n}\ncode,\npre {\n  background: #FFF;\n  padding: 2px 5px;\n  font-size: .87em;\n  margin: initial 5px;\n  font-family: \"DejaVu Sans Mono\", \"Consolas\", \"Courier New\", monospace;\n}\ntable,\ntd,\nth {\n  border-collapse: collapsed;\n  border: 1px solid #333;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Waterfall = (function () {
