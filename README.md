@@ -7,6 +7,7 @@ A sticky note using node and express
 * 笔记拖拽
 * 分权限增、删、改
 * 第三方登录
+* 支持Markdown简单语法
 
 ### 涉及到的知识点
 * `less`(css 预编译器)
