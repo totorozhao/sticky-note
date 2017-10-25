@@ -86,7 +86,16 @@ Note.prototype = {
         self.add(msg)
       }
     })
+    $note.hover(function(){
+      $delete.fadeIn()
+    },function(){
+      $delete.hide()
+    })
 
+
+    $delete.on('click', function () {
+      self.delete()
+    })
 
     //设置移动
     $noteHead.on('mousedown', function (e) {
